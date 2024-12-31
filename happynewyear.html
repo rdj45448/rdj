@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year 2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #ffafbd, #ffc3a0);
+            color: #333;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        .fireworks {
+            margin-top: 20px;
+            animation: flicker 1s infinite alternate;
+        }
+        @keyframes flicker {
+            0% { opacity: 1; }
+            100% { opacity: 0.7; }
+        }
+        button {
+            background-color: #ff5722;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            margin-top: 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e64a19;
+        }
+    </style>
+</head>
+<body>
+    <h1>🎉 Happy New Year 2025! 🎉</h1>
+    <p>Wishing you joy, success, and all the happiness in the coming year!</p>
+    <img src="https://via.placeholder.com/400x200?text=Happy+New+Year+2025" alt="Happy New Year" class="fireworks">
+    <button onclick="shareWishes()">Share This Wish</button>
+
+    <script>
+        function shareWishes() {
+            const message = "🎉 Happy New Year 2025! Wishing you all the best for the upcoming year. 🌟 Check this out: " + window.location.href;
+            navigator.clipboard.writeText(message).then(() => {
+                alert("The link and message have been copied to your clipboard. Share it with your friends!");
+            }).catch(() => {
+                alert("Unable to copy the message. Please try again.");
+            });
+        }
+    </script>
+</body>
+</html>
